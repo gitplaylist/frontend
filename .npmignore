@@ -1,0 +1,7 @@
+src
+test
+.conf
+gulpfile.js
+*.log
+*.sublime-*
+coverage
