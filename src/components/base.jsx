@@ -12,8 +12,8 @@ class Header extends React.Component {
             <Link to="/">gitPlaylists</Link>
           </h1>
           <nav>
-            <Link to="/about">Login</Link>
-            <Link to="/login">Sign up</Link>
+            <Link to="/login">Login</Link>
+            <Link to="/sign-up">Sign up</Link>
           </nav>
         </div>
       </header>
