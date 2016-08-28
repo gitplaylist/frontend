@@ -16,8 +16,9 @@ app.get('/client.js', function(req, res) {
 });
 
 app.get('*', function(req, res) {
-  var reactHtml = "<html><body><div id='content'></div><script src='/client.js'></script></body></html>";
-  res.end(reactHtml);
+  res.sendFile("/index.html", {
+    root: './src'
+  });
 });
 
 app.use('/', proxy('http://0.0.0.0:3000/'));
