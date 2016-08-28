@@ -3,6 +3,7 @@ import { renderToString } from 'react-dom/server';
 import { Router, Route, Link, IndexRoute, browserHistory } from 'react-router';
 import express from 'express';
 import { App, router } from './components/app.jsx';
+import proxy from 'express-http-proxy';
 
 
 const app = express();
@@ -18,6 +19,8 @@ app.get('*', function(req, res) {
   var reactHtml = "<html><body><div id='content'></div><script src='/client.js'></script></body></html>";
   res.end(reactHtml);
 });
+
+app.use('/', proxy('http://0.0.0.0:3000/'));
 
 app.listen(port, '0.0.0.0', function(err) {
   console.info('==> 🌎 Listening on http://0.0.0.0:%s/', port);
