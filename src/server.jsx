@@ -6,7 +6,7 @@ import { App, router } from './components/app.jsx';
 
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 4000;
 
 app.get('/client.js', function(req, res) {
   res.sendFile("/client.js", {
