@@ -7,7 +7,7 @@ export class AboutView extends React.Component {
         <div class="container">
           <h3>Login</h3>
           <hr/>
-          <form action="/users/authorize/" method="post">
+          <form action="/users/authorize" method="post">
             <label>
               Email
               <input name="email" type="email"/>

@@ -7,7 +7,6 @@ import { NoMatchView } from './nomatch.jsx';
 
 export class App extends React.Component {
   render() {
-    console.log(this);
     return (<div>
       <header>
         <div className="top-bar">
