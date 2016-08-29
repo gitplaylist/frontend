@@ -1,10 +1,12 @@
 import React from 'react';
+import { Title } from '../utils/title.jsx';
 
 
 export class SignupView extends React.Component {
   render() {
     return (
       <div className="container">
+        <Title value="Sign Up"/>
         <h3>Sign up</h3>
         <hr/>
         <form action="/users" method="post">
@@ -22,6 +24,7 @@ export class SignupView extends React.Component {
         <a href="/users/github">Github Login</a>
         <a href="/users/spotify">Spotify Login</a>
       </div>
+
     );
   }
 }

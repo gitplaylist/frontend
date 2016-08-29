@@ -2,7 +2,7 @@ import React from 'react';
 import { Router, Route, Link, IndexRoute, browserHistory } from 'react-router';
 import { IndexView } from './index.jsx';
 import { LoginView } from './authentication/login.jsx';
-import { SignupView } from './authentication/signup.jsx';
+import { SignupView } from './authentication/sign-up.jsx';
 import { NoMatchView } from './nomatch.jsx';
 import { BaseTemplate } from './base.jsx';
 

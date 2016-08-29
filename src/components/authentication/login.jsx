@@ -1,10 +1,12 @@
 import React from 'react';
+import { Title } from '../utils/title.jsx';
 
 
 export class LoginView extends React.Component {
   render() {
     return (
       <div className="container">
+        <Title value="Login"/>
         <h3>Login</h3>
         <hr/>
         <form action="/users/authorize" method="post">
