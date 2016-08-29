@@ -4,4 +4,4 @@ import { router } from './components/app.jsx';
 require('gitplaylist-brand/dist/brand.css');
 
 
-render(router, document.getElementById("content"));
+render(router, document.getElementById('content'));
