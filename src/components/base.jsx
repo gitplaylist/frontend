@@ -25,8 +25,8 @@ class Footer extends React.Component {
     return (
       <footer className='container'>
         <hr/>
-        <span>BaseTemplate
-          FOOTER
+        <span>
+          footer goes here
         </span>
       </footer>
     );
