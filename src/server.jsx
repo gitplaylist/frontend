@@ -2,7 +2,7 @@ import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { Router, Route, Link, IndexRoute, browserHistory } from 'react-router';
 import express from 'express';
-import { App, router } from './components/app.jsx';
+import { App, router } from './components/App';
 import proxy from 'express-http-proxy';
 
 

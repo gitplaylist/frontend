@@ -1,6 +1,8 @@
 import React from 'react';
 import $ from 'jquery';
 import { Title } from '../utils/title.jsx';
+import { pushUser } from '../../actions/index';
+import { store } from '../../index';
 
 
 class SignUpForm extends React.Component {
@@ -24,25 +26,13 @@ class SignUpForm extends React.Component {
     e.preventDefault();
     var email = this.state.email.trim();
     var password = this.state.password.trim();
-    if (!email || !password) {
-      return;
-    }
     var data = {
       'email': email,
       'password': password,
     }
-    $.ajax({
-      url: '/users',
-      dataType: 'json',
-      type: 'POST',
-      data: data,
-      success: function(data) {
-        this.setState({data: data});
-      }.bind(this),
-      error: function(xhr, status, err) {
-        console.error('/users', status, err.toString());
-      }.bind(this)
-    });
+    e.preventDefault();
+    store.dispatch(pushUser(data));
+    this.setState(data);
   }
 
   render() {
