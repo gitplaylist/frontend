@@ -1,12 +1,9 @@
 import { combineReducers } from 'redux'
-import todos from './todos'
 import user from './users'
-import visibilityFilter from './visibilityFilter'
 
-const todoApp = combineReducers({
-  todos,
+
+const gitplaylistApp = combineReducers({
   user,
-  visibilityFilter
 })
 
-export default todoApp
+export default gitplaylistApp

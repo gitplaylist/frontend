@@ -21,17 +21,13 @@ export class UserView extends React.Component {
   }
 }
 
-
-
-
-
-function addUser(data) {
-  return dispatch => {
-    dispatch(addUser(data))
-    return fetch('http://localhost:4000/users/')
-      .then(response => response.json())
-      .then(json => dispatch(receiveUser(subreddit, json)))
-  }
-}
+// function addUser(data) {
+//   return dispatch => {
+//     dispatch(addUser(data))
+//     return fetch('http://localhost:4000/users/')
+//       .then(response => response.json())
+//       .then(json => dispatch(receiveUser(subreddit, json)))
+//   }
+// }
 
 export default user

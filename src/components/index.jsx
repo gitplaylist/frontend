@@ -1,5 +1,5 @@
-import React from 'react';
 import { Title } from './utils/title.jsx';
+
 
 export const IndexView = () => (
   <div>

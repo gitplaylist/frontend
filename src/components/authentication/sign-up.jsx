@@ -1,5 +1,4 @@
 import React from 'react';
-import $ from 'jquery';
 import { Title } from '../utils/title.jsx';
 import { pushUser } from '../../actions/index';
 import { store } from '../../index';

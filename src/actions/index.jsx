@@ -1,3 +1,7 @@
+require('es6-promise').polyfill();
+require('isomorphic-fetch');
+
+
 export const addUser = (email, password) => {
   return {
     type: 'ADD_USER',
@@ -16,11 +20,16 @@ export const receiveUser = (json) => {
 
 export function pushUser(data) {
   return dispatch => {
-    dispatch(addUser(data));
+    dispatch(addUser(data.email, data.password));
+    var form_data = new FormData();
+
+    for ( var key in data ) {
+        form_data.append(key, data[key]);
+    }
     return fetch('http://localhost:3000/users',
       {
         method: 'POST',
-        body: new FormData(data),
+        body: form_data,
         // method: 'POST',
         // headers: {
         //   'Accept': 'application/json',
